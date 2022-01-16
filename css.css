@@ -12,13 +12,6 @@ body {
     overflow: auto;
 }
 
-#sidebar {
-    background-color: rgba(83, 83, 83, 0.3);
-    border: 1px solid #d4d4d4;
-    padding-left: 10px;
-    border-radius: 8px;
-}
-
 #bottom {
     text-align: center;
     padding: 10px;
@@ -66,4 +59,49 @@ a {
 
 a:hover {
     color: #00f7ff;
+}
+
+.button {
+    width: 130px;
+    float: left;
+    background-color: #00aaaa;
+    color: #ffffff;
+    list-style-type: none;
+    margin: 4px;
+    padding: 2px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #008383;
+}
+
+#sidebar {
+    background-color: rgba(83, 83, 83, 0.3);
+    border: 1px solid #d4d4d4;
+    padding-left: 10px;
+    border-radius: 8px;
+}
+
+#mogus {
+    background-color: rgba(83, 83, 83, 0.3);
+    border: 1px solid #d4d4d4;
+    padding-left: 10px;
+    border-radius: 8px;
+    height: 180px;
+    width: 500px;
+    float:left;
+}
+#ass {
+    background-color: rgba(83, 83, 83, 0.3);
+    border: 1px solid #d4d4d4;
+    padding-left: 10px;
+    border-radius: 8px;
+    height: 180px;
+    width: 500px;
+    float:left;
+    margin-left: 15px;
 }
