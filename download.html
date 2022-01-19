@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Txab's Website - 404</title>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+    <div class="container wrapper">
+        <div id="top">
+        <h1>Your Download is starting...</h1>
+        <p id="text">Downloading in 0</p>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(document.location.search);
+        const file = params.get("file");
+        if (file == null) {
+            alert("Error: No file to download specified!")
+            window.location.href = "index.html";
+        }
+
+        var text = document.getElementById("text");
+        var counter = 5;
+
+        text.innerHTML = "Downloading in 5";
+        var id;
+        id = setInterval(function() {
+            counter--;
+            if(counter < 0) {
+                text.innerHTML = 'Not downloading? Try this <a id="download" download>direct download</a>';
+                var download = document.getElementById("download");
+                download.href = "stuff/"+file
+                download.click()
+                
+                clearInterval(id);
+            } else {
+                text.innerHTML = "Downloading in " + counter.toString();
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
