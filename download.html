@@ -34,7 +34,7 @@
             if(counter < 0) {
                 text.innerHTML = 'Not downloading? Try this <a id="download" download>direct download</a>';
                 var download = document.getElementById("download");
-                download.href = "stuff/"+file
+                download.href = file
                 download.click()
                 
                 clearInterval(id);
